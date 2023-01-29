@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-w8g9q58e1d24ypu4lo7$00vle892ptap&*z$)yt*-*&^=66&pk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework_swagger',
+    'user_app',
+    'petition_app',
 ]
 
 MIDDLEWARE = [
@@ -66,6 +69,18 @@ TEMPLATES = [
         },
     },
 ]
+
+# authentication and permissions
+REST_FRAMEWORK = {
+   'DEFAULT_AUTHENTICATION_CLASSES': (
+       'rest_framework.authentication.BasicAuthentication',
+       'rest_framework.authentication.SessionAuthentication',
+   ),
+   'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.AllowAny',
+   ),
+    # 'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+}
 
 WSGI_APPLICATION = 'PetitionWebapp.wsgi.application'
 
@@ -112,12 +127,29 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.1/howto/static-files/
+MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_URL = '/media/'
 
-STATIC_URL = 'static/'
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.2/howto/static-files/
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#set drf use which user model: 
+AUTH_USER_MODEL="user_app.User"
+
+#you can fill this in .env file
+# EMAIL_BACKEND =config('EMAIL_BACKEND',default='django.core.mail.backends.console.EmailBackend')
+# EMAIL_HOST = config('EMAIL_HOST',default='smtp.gmail.com')
+# EMAIL_USE_TLS = config('EMAIL_USE_TLS',default=True)
+# EMAIL_PORT = config('EMAIL_PORT',default='587')
+# EMAIL_HOST_USER = config('EMAIL_HOST_USER',default='example@example.com')
+# EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD',default='examplepassword')
