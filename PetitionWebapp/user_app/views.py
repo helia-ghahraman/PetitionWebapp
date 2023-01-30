@@ -7,6 +7,7 @@ from django.contrib.auth import login, logout
 from django.shortcuts import render, redirect
 from .forms import *
 from .models import User
+from .filters import UserFilter
 
 
 class UserSignUpView(CreateView):
@@ -41,6 +42,9 @@ class UserListView(LoginRequiredMixin, ListView):
 
     def get_context_data(self, **kwargs):
         context = super(UserListView, self).get_context_data(**kwargs)
+        filterset = UserFilter(
+            self.request.GET, queryset=self.get_queryset().order_by('id'))
+        context['filterset'] = filterset
         return context 
 
 

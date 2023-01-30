@@ -11,3 +11,4 @@ class Petition(models.Model):
     start_datetime = models.DateTimeField(auto_now_add=True)
     end_datetime = models.DateTimeField(null=False, blank=False)
     user_signed = models.ManyToManyField(to=User)
+    user_signed_count = models.IntegerField(default=0)

@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+# from decouple import config
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,6 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# SECRET_KEY = config('SECRET_KEY',default='django-insecure-w8g9q58e1d24ypu4lo7$00vle892ptap&*z$)yt*-*&^=66&pk')
 SECRET_KEY = 'django-insecure-w8g9q58e1d24ypu4lo7$00vle892ptap&*z$)yt*-*&^=66&pk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -37,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework_swagger',
     'rest_framework',
     'drf_yasg',
     'user_app',
@@ -52,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'crum.CurrentRequestUserMiddleware',
 ]
 
 ROOT_URLCONF = 'PetitionWebapp.urls'
@@ -72,10 +75,6 @@ TEMPLATES = [
     },
 ]
 
-TEMPLATE_LOADERS = (
-'django.template.loaders.eggs.Loader',
-)
-
 # authentication and permissions
 REST_FRAMEWORK = {
    'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -85,7 +84,7 @@ REST_FRAMEWORK = {
    'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.AllowAny',
    ),
-    # 'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
 }
 
 WSGI_APPLICATION = 'PetitionWebapp.wsgi.application'
@@ -158,3 +157,7 @@ AUTH_USER_MODEL="user_app.User"
 # EMAIL_PORT = config('EMAIL_PORT',default='587')
 # EMAIL_HOST_USER = config('EMAIL_HOST_USER',default='example@example.com')
 # EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD',default='examplepassword')
+
+SWAGGER_SETTINGS = {
+   'USE_SESSION_AUTH': False
+}

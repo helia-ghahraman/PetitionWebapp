@@ -18,7 +18,6 @@ class PetitionForm(ModelForm):
     
     def save(self):
         obj = super(PetitionForm, self).save()
-        if not obj.user_created:
-            obj.user_created = self.user
-            obj.save()
+        obj.user_created = self.user
+        obj.save()
         return obj

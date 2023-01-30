@@ -1,3 +1,4 @@
+import datetime
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.shortcuts import get_object_or_404
 from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
@@ -6,6 +7,7 @@ from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
 from django.urls import reverse
 from .forms import PetitionForm
 from .models import Petition
+from .filters import PetitionFilter
 
 
 class PetitionCreateView(LoginRequiredMixin, CreateView):
@@ -45,6 +47,15 @@ class PetitionDetailView(LoginRequiredMixin, DetailView):
 
 class PetitionListView(LoginRequiredMixin, ListView):
     model = Petition
+    paginate_by = 10
+    filterset_class = PetitionFilter
+
+    def get_context_data(self, **kwargs):
+        context = super(PetitionListView, self).get_context_data(**kwargs)
+        filterset = PetitionFilter(
+            self.request.GET, queryset=self.get_queryset().order_by('id'))
+        context['filterset'] = filterset
+        return context
 
 
 class SignPetitionView(LoginRequiredMixin, TemplateView):
@@ -53,7 +64,13 @@ class SignPetitionView(LoginRequiredMixin, TemplateView):
     def post(self, request, pk):
         petition = get_object_or_404(Petition, pk=pk)
         self.object = petition
-        petition.user_signed.add(request.user)
+        if petition.end_datetime > datetime.now():
+            petition.user_signed.add(request.user)
+            petition.user_signed_count += 1
+            petition.save()
+        else:
+            # todo
+            pass
 
     def get_context_data(self, **kwargs):
         context = super(SignPetitionView, self).get_context_data(**kwargs)

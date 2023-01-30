@@ -1,3 +1,15 @@
+
+<form method="get">
+    {{ filterset.form.as_p }}
+    <input type="submit" />
+</form>
+
+{% for obj in filterset.qs %}
+    {{ obj.username }}<br />
+{% endfor %}
+
+<br>------------------------------------------</br>
+
 <ul>
     {% for user in user_list %}
         <li>{{ user.username }}</li>

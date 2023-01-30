@@ -8,15 +8,15 @@ class SignUpForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'password1', 'password2',
-                 'first_name', 'last_name', 'email']
+                 'meli_code', 'email']
 
 
 class PrivateProfileForm(UserChangeForm):
     class Meta:
         model = User
         fields = ['username', 'first_name', 'last_name',
-                  'email', 'phone_number', 'gender',
-                  'birthdate', 'profile_photo']
+                  'meli_code', 'email', 'phone_number',
+                  'gender', 'birthdate', 'profile_photo']
 
     def __init__(self, *args, **kwargs):
         super(PrivateProfileForm, self).__init__(*args, **kwargs)
