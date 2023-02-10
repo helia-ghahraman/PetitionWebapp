@@ -10,7 +10,5 @@ urlpatterns = [
     path('list/', UserListView.as_view(), name='user-list'),
     path('login/', LoginView.as_view(), name='user-login'),
     path('logout/', LogoutView.as_view(), name='user-logout'),
-    path('homepage/', HomePageView.as_view(), name='user-homepage'),
     path('<int:pk>/profile/update/password/', ChangePasswordView.as_view(), name='profile-password'),
-
 ]

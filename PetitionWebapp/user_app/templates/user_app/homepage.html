@@ -1,1 +1,884 @@
-homepage for {{ user.username }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../static/user_app/homepage.css">
+    <title>کارزار</title>
+</head>
+<body>
+
+    <!-----------------  Header Section ---------------->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <button onclick="window.location.href='log-in.html';" class="create-campaign-btn">
+                        ایجاد کارزار
+                    </button>
+                    <button onclick="window.location.href='log-in.html';">
+                        پنل کاربری
+                    </button>
+                    <button onclick="myFunction()">
+                        <script>
+                            function myFunction() {
+                                var txt;
+                                alert("There is no news today!")
+                            }
+                        </script>
+                        <img src="../../../static/image/bell.png" width="30px;" />
+                    </button>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            درباره کارزار
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">معرفی استارپ آپ کارزار</a></li>
+                            <li><a class="dropdown-item" href="#">ایا کارزار ها موثر است؟</a></li>
+                            <li><a class="dropdown-item" href="#">رسانه های همراه</a></li>
+                            <li><a class="dropdown-item" href="#">مجوز های قانونی</a></li>
+                            <li><a class="dropdown-item" href="#">سیاست نامه های حریم خصوصی</a></li>
+                            <li><a class="dropdown-item" href="#">قوانین و شرایط استفاده</a></li>
+                            <li><a class="dropdown-item" href="#">پرسش های پر تکرار</a></li>
+                            <li><a class="dropdown-item" href="#">رویداد کنشگری ایران</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            حمایت از کارزار
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">حمایت مالی</a></li>
+                            <li><a class="dropdown-item" href="#">فهرست اعضای ویژه</a></li>
+                            <li><a class="dropdown-item" href="#">عضویت ویژه در کارزار</a></li>
+                            <li><a class="dropdown-item" href="#">جامعه داوطلبان کارزار</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            مجله کارزار
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">صفحه اصلی مجله</a></li>
+                            <li><a class="dropdown-item" href="#">رادیو کارزار(پادکست)</a></li>
+                            <li><a class="dropdown-item" href="#">دیدبان کارزار (ویدیو ها)</a></li>
+                            <li><a class="dropdown-item" href="#">گزارش های رسانه ای</a></li>
+                            <li><a class="dropdown-item" href="#">تجربه های موفق کنشگری</a></li>
+                            <li><a class="dropdown-item" href="#">یادداشت های تحلیلی</a></li>
+                            <li><a class="dropdown-item" href="#">فرهنگ کنشگری</a></li>
+                            <li><a class="dropdown-item" href="#">اخبار کارزار</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            پیگیری کارزارها
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">پیگیری های رسانه ای </a> </li>
+                            <li><a class="dropdown-item" href="#">ثبت در دبیرخانه ها</a></li>
+                            <li><a class="dropdown-item" href="#">سایر پیگیری ها </a> </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            کارزارها
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">فهرست همه ی کارزارها</a></li>
+                            <li><a class="dropdown-item" href="#">محبوب ترین کارزارها</a></li>
+                            <li><a class="dropdown-item" href="#">پر امضا ترین کارزارها </a></li>
+                            <li><a class="dropdown-item" href="#">کارزار های موفق</a></li>
+                            <li><a class="dropdown-item" href="#">ککارزارهای داغ امروز</a></li>
+                            <li><a class="dropdown-item" href="#">کارزارهای در حال رشد </a></li>
+                            <li><a class="dropdown-item" href="#">کارزار های نوپا</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <div>
+                        <h1 class="navbar-title">کارزار</h1>
+                        <span class="navbar-des">بستر جمع آوری کارزارهای مستقل</span>
+                    </div>
+                    <img class="navbar-icon" src="http://karzar.net/assets/img/logo.png" />
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-----------------  SearchBar Section---------------->
+    <section class="search-box ">
+        <div class="container">
+            <input type="text" placeholder="موضوع کارزار یا کد آن را وارد کنید.">
+            <button>جست و جو</button>
+        </div>
+    </section>
+
+    <!-----------------  Header slider Section  ---------------->
+    <section class="slider container">
+        <div class="animation1">
+        </div>
+        <div class="circles">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+            <div class="circle circle4"></div>
+            <div class="circle circle5"></div>
+            <div class="circle circle6"></div>
+            <div class="circle circle7"></div>
+            <div class="circle circle8"></div>
+        </div>
+        <div class="signs">
+            <p class="signs-host">میزبان</p>
+            <p class="signs-count">
+                22,456,438
+            </p>
+            <p class="signs-for">
+                امضا برای کنشگری مدنی
+            </p>
+        </div>
+    </section>
+
+    <section class="header-intro container">
+        <div class="buttons">
+            <button class="header-btn header-btn1">ایجاد کارزار جدید</button>
+            <button class="header-btn header-btn2">درباره کارزار</button>
+        </div>
+        <div class="supports">
+            <img src="https://www.karzar.net/assets/img/khallagh.png" alt="">
+            <img src="https://www.karzar.net/assets/img/iwmf.png" alt="">
+            <img src="https://www.karzar.net/assets/img/senfi.png" alt="">
+            <img src="https://www.karzar.net/assets/img/enamad.png" alt="">
+            <img src="https://www.karzar.net/assets/img/samandehi.png" alt="">
+        </div>
+    </section>
+
+    <!-----------------   selected campaigns Section ---------------->
+    <section class="selected-campaigns campaigns-list">
+        <div class="container container">
+            <div class="topic">
+                <button>کارزار های بیشتر</button>
+                <h2>کارزار های برگزیده</h2>
+            </div>
+            <div class="row">
+                <div class="campaign-card col-xl-4 col-sm-12">
+                    <div class="campaign-card-top">
+                        <span>
+                            نفر امضا کردند
+                        </span>
+                        <span>235</span>
+                        <div class="campaign-card-image_container">
+                            <img class="campaign-card-image" src="https://www.karzar.net/campaign-images/defaults/91x91_4.jpeg">
+                        </div>
+                        <img class="signiture-icon" src="../../../static/image/signature.png" alt="">
+                    </div>
+                    <div class="campaign-card-bottom">
+                        <div class="campaign-card-title">
+                            درخواست انتشار لیست مسافرین قطر و شفافیت در خصوص هزینه‌های صورت گرفته
+
+                        </div>
+                        <div class="campaign-card-signs">
+                            از طرف عموم مردم
+                        </div>
+                    </div>
+                </div>
+                <div class="campaign-card col-xl-4 col-sm-12">
+                    <div class="campaign-card-top blue-bg">
+                        <span>
+                            نفر امضا کردند
+                        </span>
+                        <span>235</span>
+                        <div class="campaign-card-image_container">
+                            <img class="campaign-card-image" src="https://www.karzar.net/uploads/thumbs//campaigns/2023/02/91x91_16756860175ki8gqalp3yqclely9lcku0nhwepvp97tjio02ui.jpg">
+                        </div>
+                        <img class="signiture-icon" src="../../../static/image/signature.png" alt="">
+                    </div>
+                    <div class="campaign-card-bottom">
+                        <div>
+                            <div class="campaign-card-title">
+                                درخواست ثبت بناهای ارزشمند در معرض تخریب بافت تاریخی شیراز
+                            </div>
+                        </div>
+                        <div class="campaign-card-signs">
+                            از طرف عموم مردم
+                        </div>
+                    </div>
+                </div>
+                <div class="campaign-card col-xl-4 col-sm-12">
+                    <div class="campaign-card-top">
+                        <span>
+                            نفر امضا کردند
+                        </span>
+                        <span>235</span>
+                        <div class="special-compaign">
+                            ویژه&#9733
+                        </div>
+                        <div class="campaign-card-image_container">
+                            <img class="campaign-card-image" src="https://www.karzar.net/uploads/thumbs//campaigns/2021/09/91x91_1239general-staff-of-the-armed-forces-of-the-islamic-republic-of-iran.jpg">
+                        </div>
+                        <img class="signiture-icon" src="../../../static/image/signature.png" alt="">
+                    </div>
+                    <div class="campaign-card-bottom">
+                        <div class="campaign-card-title">
+                            درخواست جایگزینی طرح جمع‌آوری سگ‌های بلاصاحب با طرح عقیم سازی
+                        </div>
+
+                        <div>
+                            <div class="campaign-card-signs">
+                                از طرف عموم مردم
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="campaign-card col-xl-4 col-sm-12">
+                    <div class="campaign-card-top blue-bg">
+                        <p>
+                            نفر امضا کردند
+                        </p>
+                        <p>
+                            <span>235</span>
+                            <span>نفر</span>
+                        </p>
+                        <div class="campaign-card-image_container">
+                            <img class="campaign-card-image" src="https://www.karzar.net/uploads/thumbs//campaigns/2022/07/91x91_11528189590_438.jpg">
+                        </div>
+                        <img class="signiture-icon" src="../../../static/image/signature.png" alt="">
+                    </div>
+                    <div class="campaign-card-bottom">
+                        <div class="campaign-card-title">
+                            درخواست انتشار لیست مسافرین قطر و شفافیت در خصوص هزینه‌های صورت گرفته
+                        </div>
+                        <div class="campaign-card-signs">
+                            از طرف عموم مردم
+                        </div>
+                    </div>
+                </div>
+                <div class="campaign-card col-xl-4 col-sm-12">
+                    <div class="campaign-card-top blue-bg">
+                        <span>
+                            نفر امضا کردند
+                        </span>
+                        <span>235</span>
+                        <div class="campaign-card-image_container">
+                            <img class="campaign-card-image" src="https://www.karzar.net/uploads/thumbs//campaigns/2023/02/91x91_0522pezeshk.jpg">
+                        </div>
+                        <img class="signiture-icon" src="../../../static/image/signature.png" alt="">
+                    </div>
+                    <div class="campaign-card-bottom">
+                        <div>
+                            <div class="campaign-card-title">
+                                درخواست ثبت بناهای ارزشمند در معرض تخریب بافت تاریخی شیراز
+                            </div>
+                        </div>
+                        <div class="campaign-card-signs">
+                            از طرف عموم مردم
+                        </div>
+                    </div>
+                </div>
+                <div class="campaign-card col-xl-4 col-sm-12">
+                    <div class="campaign-card-top blue-bg">
+                        <span>
+                            نفر امضا کردند
+                        </span>
+                        <span>235</span>
+                        <div class="campaign-card-image_container">
+                            <img class="campaign-card-image" src="https://www.karzar.net/campaign-images/defaults/91x91_3.jpeg">
+                        </div>
+                        <img class="signiture-icon" src="../../../static/image/signature.png" alt="">
+                    </div>
+                    <div class="campaign-card-bottom">
+                        <div class="campaign-card-title">
+                            درخواست جایگزینی طرح جمع‌آوری سگ‌های بلاصاحب با طرح عقیم سازی
+                        </div>
+
+                        <div>
+                            <div class="campaign-card-signs">
+                                از طرف عموم مردم
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!----------------- Special Users Section ---------------->
+    <section class="special-users">
+        <div class="container">
+            <div class="topic">
+                <button>عضو شوید</button>
+                <h2>اعضای ویژه کارزار</h2>
+            </div>
+            <div class="users">
+                <div class="user-preview">
+                    <div class="user-img">
+                        <img src="https://www.karzar.net/uploads/thumbs//profile/2023/02/97x97_04081675600680znkh2kzk0k28rvimhapazvhmracmqgrngdelo9vr.jpg" />
+                    </div>
+                    <div class="user-name">
+                        امین مقدم
+                    </div>
+                </div>
+                <div class="user-preview">
+                    <div class="user-img">
+                        <img src="https://www.karzar.net/uploads/thumbs//profile/2023/02/97x97_05241675432497fuyc9nhp9x8oeeu5jnhfenmacydqgyhtseaxoszr.jpg" />
+                    </div>
+                    <div class="user-name">
+                        امین مقدم
+                    </div>
+                </div>
+                <div class="user-preview">
+                    <div class="user-img">
+                        <img src="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?s=75&d=identicon&r=g" />
+                    </div>
+                    <div class="user-name">
+                        امین مقدم
+                    </div>
+                </div>
+                <div class="user-preview">
+                    <div class="user-img">
+                        <img src="https://www.karzar.net/uploads/thumbs//profile/2022/12/97x97_08471672507045kcq8x3fsm4proa4wft3srrxdt4tchzhemattgqcg.jpg" />
+                    </div>
+                    <div class="user-name">
+                        امین مقدم
+                    </div>
+                </div>
+                <div class="user-preview">
+                    <div class="user-img">
+                        <img src="https://www.karzar.net/uploads/thumbs//profile/2023/01/97x97_09231674366836icjq0lwhd9c6tzm4oykghudmvultcybbtkzg9yfe.jpg" />
+                    </div>
+                    <div class="user-name">
+                        امین مقدم
+                    </div>
+                </div>
+                <div class="user-preview">
+                    <div class="user-img">
+                        <img src="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?s=75&d=identicon&r=g" />
+                    </div>
+                    <div class="user-name">
+                        امین مقدم
+                    </div>
+                </div>
+                <div class="user-preview">
+                    <div class="user-img">
+                        <img src="https://www.karzar.net/uploads/thumbs//profile/2022/12/97x97_04171671799671cymrpjmzxdjvcxyzrukq4qh9mwtldcrqu86mwdnm.jpg" />
+                    </div>
+                    <div class="user-name">
+                        امین مقدم
+                    </div>
+                </div>
+                <div class="user-preview">
+                    <div class="user-img">
+                        <img src="https://www.karzar.net/uploads/thumbs//profile/2022/12/97x97_09181670219294tae8uxiawddppzvpy8qfmegg48w9ozv5v3opg1bl.jpg" />
+                    </div>
+                    <div class="user-name">
+                        امین مقدم
+                    </div>
+                </div>
+                <div class="user-preview">
+                    <div class="user-img">
+                        <img src="https://www.karzar.net/uploads/thumbs//profile/2023/02/97x97_05241675432497fuyc9nhp9x8oeeu5jnhfenmacydqgyhtseaxoszr.jpg" />
+                    </div>
+                    <div class="user-name">
+                        امین مقدم
+                    </div>
+                </div>
+                <div class="user-preview">
+                    <div class="user-img">
+                        <img src="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?s=75&d=identicon&r=g" />
+                    </div>
+                    <div class="user-name">
+                        مشاهده سایر اعضا ویژه
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------------- Banner Section ---------------->
+    <section class="banner container d-sm-none d-md-block">
+        <img src="https://www.karzar.net/assets/img/personalized-banner-desktop.jpg" />
+    </section>
+
+    <!----------------- Medias Section ---------------->
+    <section class="medias">
+        <div class="container">
+            <div class="topic">
+                <h2 class="topic">
+                    : رسانه‌هایی که کارزارها را بازتاب داده‌اند
+                </h2>
+            </div>
+        </div>
+        <div class="animation2"></div>
+    </section>
+
+    <!----------------- Campaigns Magazines Section ---------------->
+    <section class="magazines">
+        <div class="container">
+            <div class="topic">
+                <button>مشاهده مجله</button>
+                <h2>مجله کارزار</h2>
+            </div>
+            <div class="row">
+                <div class="magazine-card col-xl-4 col-lg-4">
+                    <div class="magazine-card--top">
+                        <img src="https://www.karzar.net/uploads/thumbs//blog/news/2022/09//360x270_POnaoC2C8K9zbM2Oe64rPXGekPw4yrid5wMze4vf.jpg" alt="">
+                    </div>
+                    <div class="magazine-card--bottom">
+                        <div class="magazine-news">
+                            گزارش روزنامه هم‌میهن از کارزار سهامداران بانک آینده::
+                        </div>
+                        <div class="magazine-topic">
+                            تعیین تکلیف ۷۵ هزار سهام‌دار خرد بانک آینده
+                        </div>
+                        <div class="magazine-text">
+                            با امضای بیش از ۵ هزار نفر از سهامداران بانک آینده در این کارزار، روزنامه هم‌میهن با اشاره به این کارزار گزارشی در این رابطه منتشر کرد: بانک آینده یکی از بزرگترین مبلغ هزینه‌کرد در بخش تبلیغات را در بین بانک‌های خصوصی...
+                        </div>
+                    </div>
+                </div>
+                <div class="magazine-card col-xl-4  col-lg-4">
+                    <div class="magazine-card--top">
+                        <img src="https://www.karzar.net/uploads/thumbs//blog/news/2022/09//360x270_LKiWoMpUFkEQHxurH2rnxhbofMn6VLgZuAYp4Xe1.jpg" alt="">
+                    </div>
+                    <div class="magazine-card--bottom">
+                        <div class="magazine-news">
+                            گزارش روزنامه هم‌میهن از کارزار سهامداران بانک آینده::
+                        </div>
+                        <div class="magazine-topic">
+                            تعیین تکلیف ۷۵ هزار سهام‌دار خرد بانک آینده
+                        </div>
+                        <div class="magazine-text">
+                            با امضای بیش از ۵ هزار نفر از سهامداران بانک آینده در این کارزار، روزنامه هم‌میهن با اشاره به این کارزار گزارشی در این رابطه منتشر کرد: بانک آینده یکی از بزرگترین مبلغ هزینه‌کرد در بخش تبلیغات را در بین بانک‌های خصوصی...
+                        </div>
+                    </div>
+                </div>
+                <div class="magazine-card col-xl-4  col-lg-4">
+                    <div class="magazine-card--top">
+                        <img src="https://www.karzar.net/uploads/thumbs//blog/news/2023/02//360x270_egPznpXWu1UoiFME4s9ynqtQTne8fyGuoFBh4AWg.jpg" alt="">
+                    </div>
+                    <div class="magazine-card--bottom">
+                        <div class="magazine-news">
+                            گزارش روزنامه هم‌میهن از کارزار سهامداران بانک آینده::
+                        </div>
+                        <div class="magazine-topic">
+                            تعیین تکلیف ۷۵ هزار سهام‌دار خرد بانک آینده
+                        </div>
+                        <div class="magazine-text">
+                            با امضای بیش از ۵ هزار نفر از سهامداران بانک آینده در این کارزار، روزنامه هم‌میهن با اشاره به این کارزار گزارشی در این رابطه منتشر کرد: بانک آینده یکی از بزرگترین مبلغ هزینه‌کرد در بخش تبلیغات را در بین بانک‌های خصوصی...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------------- Statistics of Visitors Section ---------------->
+    <section class="statistics">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="counter counter-1">
+                        <div class="text-wrapper">
+                            <span class="fa">۱۶۷۳۰</span>
+                            <span>عدد</span>
+                        </div>
+                    </div>
+
+                    <div class="counter-text">کمپین در کارزار ثبت شده است و مورد حمایت کاربران قرار گرقته است. </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="counter counter-2">
+                        <div class="text-wrapper">
+                            <span class="fa">۱۶۷۳۰</span>
+                            <span>عدد</span>
+                        </div>
+                    </div>
+
+                    <div class="counter-text">کمپین در کارزار ثبت شده است و مورد حمایت کاربران قرار گرقته است. </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="counter counter-3">
+                        <div class="text-wrapper">
+                            <span class="fa">۱۶۷۳۰</span>
+                            <span>عدد</span>
+                        </div>
+                    </div>
+
+                    <div class="counter-text">کمپین در کارزار ثبت شده است و مورد حمایت کاربران قرار گرقته است. </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------------- Succesful Campaigns Section ---------------->
+    <section class="succesful-campaigns campaigns-list">
+        <div class="container container">
+            <div class="topic">
+                <button>کارزار های بیشتر</button>
+                <h2>کارزار های موفق</h2>
+            </div>
+            <div class="row">
+                <div class="campaign-card col-xl-4 col-sm-12">
+                    <div class="campaign-card-top gray-bg">
+                        <span>
+                            نفر امضا کردند
+                        </span>
+                        <span>235</span>
+                        <div class="campaign-card-image_container">
+                            <img class="campaign-card-image" src="https://www.karzar.net/uploads/thumbs//campaigns/2022/10/91x91_0650%DA%A9%D8%A7%D8%B1%D9%85%D9%86%D8%AF%D8%A7%D9%86.jpg">
+                            <div class="campaign-card--scuccess">
+                                <p>
+                                    موفق شد
+                                </p>
+                            </div>
+                        </div>
+                        <img class="signiture-icon" src="../../../static/image/signature.png" alt="">
+                    </div>
+                    <div class="campaign-card-bottom">
+                        <div class="campaign-card-title">
+                            درخواست جایگزینی طرح جمع‌آوری سگ‌های بلاصاحب با طرح عقیم سازی
+                        </div>
+
+                        <div>
+                            <div class="campaign-card-signs">
+                                از طرف عموم مردم
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="campaign-card col-xl-4 col-sm-12">
+                    <div class="campaign-card-top gray-bg">
+                        <span>
+                            نفر امضا کردند
+                        </span>
+                        <span>235</span>
+                        <div class="campaign-card-image_container">
+                            <img class="campaign-card-image" src="https://www.karzar.net/uploads/thumbs//campaigns/2022/10/91x91_0650%DA%A9%D8%A7%D8%B1%D9%85%D9%86%D8%AF%D8%A7%D9%86.jpg">
+                            <div class="campaign-card--scuccess">
+                                <p>
+                                    موفق شد
+                                </p>
+                            </div>
+                        </div>
+                        <img class="signiture-icon" src="../../../static/image/signature.png" alt="">
+                    </div>
+                    <div class="campaign-card-bottom">
+                        <div class="campaign-card-title">
+                            درخواست جایگزینی طرح جمع‌آوری سگ‌های بلاصاحب با طرح عقیم سازی
+                        </div>
+
+                        <div>
+                            <div class="campaign-card-signs">
+                                از طرف عموم مردم
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="campaign-card col-xl-4 col-sm-12">
+                    <div class="campaign-card-top green-bg">
+                        <span>
+                            نفر امضا کردند
+                        </span>
+                        <span>235</span>
+                        <div class="campaign-card-image_container">
+                            <img class="campaign-card-image" src="https://www.karzar.net/uploads/thumbs//campaigns/2022/10/91x91_0650%DA%A9%D8%A7%D8%B1%D9%85%D9%86%D8%AF%D8%A7%D9%86.jpg">
+                            <div class="campaign-card--scuccess">
+                                <p>
+                                    موفق شد
+                                </p>
+                            </div>
+                        </div>
+                        <img class="signiture-icon" src="../../../static/image/signature.png" alt="">
+                    </div>
+                    <div class="campaign-card-bottom">
+                        <div class="campaign-card-title">
+                            درخواست جایگزینی طرح جمع‌آوری سگ‌های بلاصاحب با طرح عقیم سازی
+                        </div>
+
+                        <div>
+                            <div class="campaign-card-signs">
+                                از طرف عموم مردم
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="campaign-card col-xl-4 col-sm-12">
+                    <div class="campaign-card-top gray-bg">
+                        <span>
+                            نفر امضا کردند
+                        </span>
+                        <span>235</span>
+                        <div class="campaign-card-image_container">
+                            <img class="campaign-card-image" src="https://www.karzar.net/uploads/thumbs//campaigns/2022/10/91x91_0650%DA%A9%D8%A7%D8%B1%D9%85%D9%86%D8%AF%D8%A7%D9%86.jpg">
+                            <div class="campaign-card--scuccess">
+                                <p>
+                                    موفق شد
+                                </p>
+                            </div>
+                        </div>
+                        <img class="signiture-icon" src="../../../static/image/signature.png" alt="">
+                    </div>
+                    <div class="campaign-card-bottom">
+                        <div class="campaign-card-title">
+                            درخواست جایگزینی طرح جمع‌آوری سگ‌های بلاصاحب با طرح عقیم سازی
+                        </div>
+
+                        <div>
+                            <div class="campaign-card-signs">
+                                از طرف عموم مردم
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="campaign-card col-xl-4 col-sm-12">
+                    <div class="campaign-card-top gray-bg">
+                        <span>
+                            نفر امضا کردند
+                        </span>
+                        <span>235</span>
+                        <div class="campaign-card-image_container">
+                            <img class="campaign-card-image" src="https://www.karzar.net/uploads/thumbs//campaigns/2022/10/91x91_0650%DA%A9%D8%A7%D8%B1%D9%85%D9%86%D8%AF%D8%A7%D9%86.jpg">
+                            <div class="campaign-card--scuccess">
+                                <p>
+                                    موفق شد
+                                </p>
+                            </div>
+                        </div>
+                        <img class="signiture-icon" src="../../../static/image/signature.png" alt="">
+                    </div>
+                    <div class="campaign-card-bottom">
+                        <div class="campaign-card-title">
+                            درخواست جایگزینی طرح جمع‌آوری سگ‌های بلاصاحب با طرح عقیم سازی
+                        </div>
+
+                        <div>
+                            <div class="campaign-card-signs">
+                                از طرف عموم مردم
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="campaign-card col-xl-4 col-sm-12">
+                    <div class="campaign-card-top gray-bg">
+                        <span>
+                            نفر امضا کردند
+                        </span>
+                        <span>235</span>
+                        <div class="campaign-card-image_container">
+                            <img class="campaign-card-image" src="https://www.karzar.net/uploads/thumbs//campaigns/2022/10/91x91_0650%DA%A9%D8%A7%D8%B1%D9%85%D9%86%D8%AF%D8%A7%D9%86.jpg">
+                            <div class="campaign-card--scuccess">
+                                <p>
+                                    موفق شد
+                                </p>
+                            </div>
+                        </div>
+                        <img class="signiture-icon" src="../../../static/image/signature.png" alt="">
+                    </div>
+                    <div class="campaign-card-bottom">
+                        <div class="campaign-card-title">
+                            درخواست جایگزینی طرح جمع‌آوری سگ‌های بلاصاحب با طرح عقیم سازی
+                        </div>
+
+                        <div>
+                            <div class="campaign-card-signs">
+                                از طرف عموم مردم
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!----------------- introdiction to Karzar Section ---------------->
+    <section class="karzar-introduction container">
+        <div class="karzar-introduction--img">
+            <img src="https://www.karzar.net/assets/img/logo-text.png" />
+        </div>
+        <div class="karzar-introduction--text">
+            کارزار یک استارتاپ اجتماعی است که مأموریت اصلی آن ترویج فرهنگ مطالبه‌گری از طریق ایجاد بستری برای هم‌افزایی خواست‌های مدنی است. کارزار پلتفرمی امن، مستقل و رایگان برای طرح درخواست‌ها، شکواییه‌ها و تقدیرهای جمعی از طریق جمع‌آوری امضا است. پتلفرم کارزار در چهارچوب قوانین جمهوری اسلامی ایران و با اتکا به اصل ۲۴ قانون اساسی مبنی بر آزادی بیان، و همچنین قوانین حقوق شهروندی و قانون تجارت الکترونیک در کشور فعالیت می‌نماید. برای اطلاعات بیشتر درباره پلتفرم کارزار اینجا کلیک کنید.
+        </div>
+    </section>
+
+    <!----------------- Medias Section ---------------->
+    <section class="medias">
+        <div class="container">
+            <div class="topic">
+                <h2 class="topic">
+                    : رسانه‌هایی که کارزارها را بازتاب داده‌اند
+                </h2>
+            </div>
+        </div>
+        <div class="animation2"></div>
+    </section>
+
+    <!----------------- create-campaign Section ---------------->
+    <div class="create-campaign">
+
+        <div class="right-section">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="55.998" height="55.999" viewBox="0 0 55.998 55.999">
+                    <g id="Group_221" data-name="Group 221" transform="translate(-475.002 -165)">
+                        <g id="noun_crowd_funding_4397640" data-name="noun_crowd funding_4397640" transform="translate(470.002 160)" style="mix-blend-mode: overlay;isolation: isolate">
+                            <path id="Path_302" data-name="Path 302" d="M36.769,49.737a12.967,12.967,0,1,1,9.17-3.8A12.877,12.877,0,0,1,36.769,49.737Zm0-23.99a11.024,11.024,0,1,0,7.794,3.229A10.946,10.946,0,0,0,36.768,25.747Z" transform="translate(-5.64 -5.64)" fill="#4affff" />
+                            <path id="Path_306" data-name="Path 306" d="M53.022,23.475a14.618,14.618,0,0,0-1.615-.9l.842-1.756a16.723,16.723,0,0,1,1.828,1.023Z" transform="translate(-13.922 -4.745)" fill="#4affff" />
+                            <path id="Path_307" data-name="Path 307" d="M30.712,23.338l-1.032-1.649a16.661,16.661,0,0,1,1.844-1l.815,1.767A14.718,14.718,0,0,0,30.712,23.338Z" transform="translate(-7.403 -4.707)" fill="#4affff" />
+                            <path id="Path_308" data-name="Path 308" d="M48.192,21.317a14.614,14.614,0,0,0-1.789-.47l.375-1.91a16.811,16.811,0,0,1,2.026.533Z" transform="translate(-12.42 -4.181)" fill="#4affff" />
+                            <path id="Path_309" data-name="Path 309" d="M35.692,21.248,35.1,19.393a16.742,16.742,0,0,1,2.033-.506l.351,1.914A14.875,14.875,0,0,0,35.692,21.248Z" transform="translate(-9.031 -4.166)" fill="#4affff" />
+                            <path id="Path_310" data-name="Path 310" d="M42.94,20.473a14.635,14.635,0,0,0-1.851-.01l-.11-1.943a16.909,16.909,0,0,1,2.095.013Z" transform="translate(-10.793 -4.048)" fill="#4affff" />
+                            <path id="Path_311" data-name="Path 311" d="M23.472,30.485a14.632,14.632,0,0,0-.9,1.615l-1.755-.842a16.794,16.794,0,0,1,1.023-1.828Z" transform="translate(-4.744 -7.329)" fill="#4affff" />
+                            <path id="Path_312" data-name="Path 312" d="M23.332,52.8l-1.65,1.032a16.665,16.665,0,0,1-1-1.844l1.767-.815A14.7,14.7,0,0,0,23.332,52.8Z" transform="translate(-4.705 -13.851)" fill="#4affff" />
+                            <path id="Path_313" data-name="Path 313" d="M21.314,35.429a14.615,14.615,0,0,0-.47,1.789l-1.909-.375a16.75,16.75,0,0,1,.532-2.027Z" transform="translate(-4.18 -8.945)" fill="#4affff" />
+                            <path id="Path_314" data-name="Path 314" d="M21.242,47.937l-1.855.588a16.749,16.749,0,0,1-.506-2.033l1.914-.351A14.845,14.845,0,0,0,21.242,47.937Z" transform="translate(-4.164 -12.342)" fill="#4affff" />
+                            <path id="Path_315" data-name="Path 315" d="M20.468,40.813a14.634,14.634,0,0,0-.01,1.851l-1.943.11a16.91,16.91,0,0,1,.013-2.095Z" transform="translate(-4.046 -10.704)" fill="#4affff" />
+                            <path id="Path_316" data-name="Path 316" d="M30.486,60.043a14.625,14.625,0,0,0,1.615.9L31.259,62.7a16.735,16.735,0,0,1-1.828-1.023Z" transform="translate(-7.329 -16.512)" fill="#4affff" />
+                            <path id="Path_317" data-name="Path 317" d="M52.8,60.188l1.032,1.65a16.742,16.742,0,0,1-1.844,1l-.815-1.767A14.725,14.725,0,0,0,52.8,60.188Z" transform="translate(-13.852 -16.556)" fill="#4affff" />
+                            <path id="Path_318" data-name="Path 318" d="M35.432,62.316a14.615,14.615,0,0,0,1.789.47L36.846,64.7a16.718,16.718,0,0,1-2.026-.532Z" transform="translate(-8.945 -17.194)" fill="#4affff" />
+                            <path id="Path_319" data-name="Path 319" d="M47.938,62.4l.588,1.855a16.746,16.746,0,0,1-2.033.506l-.351-1.914A14.8,14.8,0,0,0,47.938,62.4Z" transform="translate(-12.342 -17.219)" fill="#4affff" />
+                            <path id="Path_320" data-name="Path 320" d="M40.813,63.336a14.646,14.646,0,0,0,1.851.011l.11,1.943a16.8,16.8,0,0,1-2.095-.012Z" transform="translate(-10.704 -17.5)" fill="#4affff" />
+                            <path id="Path_321" data-name="Path 321" d="M60.04,53.025a14.716,14.716,0,0,0,.9-1.615l1.755.842a16.837,16.837,0,0,1-1.023,1.828Z" transform="translate(-16.511 -13.923)" fill="#4affff" />
+                            <path id="Path_322" data-name="Path 322" d="M60.185,30.712l1.65-1.032a16.661,16.661,0,0,1,1,1.844l-1.767.815A14.575,14.575,0,0,0,60.185,30.712Z" transform="translate(-16.555 -7.404)" fill="#4affff" />
+                            <path id="Path_323" data-name="Path 323" d="M62.318,48.191a14.615,14.615,0,0,0,.47-1.789l1.91.375a16.9,16.9,0,0,1-.533,2.026Z" transform="translate(-17.195 -12.42)" fill="#4affff" />
+                            <path id="Path_324" data-name="Path 324" d="M62.4,35.693l1.855-.588a16.756,16.756,0,0,1,.506,2.033l-1.914.351A14.822,14.822,0,0,0,62.4,35.693Z" transform="translate(-17.219 -9.031)" fill="#4affff" />
+                            <path id="Path_325" data-name="Path 325" d="M63.335,42.942a14.531,14.531,0,0,0,.011-1.851l1.943-.11a16.816,16.816,0,0,1-.012,2.095Z" transform="translate(-17.5 -10.794)" fill="#4affff" />
+                            <path id="Path_326" data-name="Path 326" d="M27.761,26.426,24.538,23.2l-1.376,1.376L26.385,27.8Z" transform="translate(-5.448 -5.461)" fill="#4affff" />
+                            <path id="Path_327" data-name="Path 327" d="M26.747,56.282l-1.376-1.376-5.6,5.6,1.376,1.376Z" transform="translate(-4.431 -14.971)" fill="#4affff" />
+                            <path id="Path_328" data-name="Path 328" d="M63.606,62.2,56.312,54.91l-1.376,1.376L62.23,63.58Z" transform="translate(-14.98 -14.972)" fill="#4affff" />
+                            <path id="Path_329" data-name="Path 329" d="M61.891,21.189l-1.375-1.376-5.6,5.6,1.375,1.376Z" transform="translate(-14.974 -4.444)" fill="#4affff" />
+                            <path id="Path_330" data-name="Path 330" d="M15.889,20.46a4.572,4.572,0,1,1,3.232-1.338A4.542,4.542,0,0,1,15.889,20.46Zm0-7.2a2.625,2.625,0,1,0,1.856.769A2.608,2.608,0,0,0,15.889,13.263Z" transform="translate(-1.895 -1.895)" fill="#4affff" />
+                            <path id="Path_331" data-name="Path 331" d="M10.771,74.705a5.77,5.77,0,1,1,4.08-1.689A5.73,5.73,0,0,1,10.771,74.705Zm0-9.6a3.824,3.824,0,1,0,2.7,1.12A3.8,3.8,0,0,0,10.771,65.109Z" transform="translate(0 -17.449)" fill="#4affff" />
+                            <path id="Path_332" data-name="Path 332" d="M68.933,16.542a5.771,5.771,0,1,1,4.08-1.69A5.735,5.735,0,0,1,68.933,16.542Zm0-9.6a3.824,3.824,0,1,0,2.705,1.12A3.8,3.8,0,0,0,68.932,6.946Z" transform="translate(-17.448)" fill="#4affff" />
+                            <path id="Path_333" data-name="Path 333" d="M72.055,79.023h0a6.971,6.971,0,1,1,4.929-2.041A6.926,6.926,0,0,1,72.055,79.023Zm0-12A5.025,5.025,0,1,0,75.608,68.5,4.993,4.993,0,0,0,72.055,67.028Z" transform="translate(-18.025 -18.024)" fill="#4affff" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <h2>
+                تغییر
+                <span>از شما</span>
+                شروع می شود
+            </h2>
+        </div>
+        <p>
+            با ایجاد یک کارزار، در اصلاح و رشد جامعه سهیم باشید و با همراهی کسانی که با شما موافق هستند صدای خود را به گوش همگان برسانید. بیایید منفعل نباشیم!
+        </p>
+
+        <div class="create-campaign-btn">
+            <button>
+                ایجاد کارزار جدید
+            </button>
+            <span>
+                رایگان
+            </span>
+        </div>
+
+    </div>
+
+    <!-----------------  footer Section ---------------->
+    <footer>
+        <section class="footer-top">
+            <div class="right-section">
+                <div class="about-karzar">
+                    «کارزار» بستری است برای اراده و خواست جمعی. برای آنکه دغدغه‌های گروهی دیده و صدای مردم شنیده شود. کارزار می‌خواهد بستری امن ایجاد کند برای ارائه خواسته‌های مدنی، به دور از هر گونه هنجارگریزی و قانون‌شکنی. هدف کارزار طرح دغدغه‌های فرهنگی، اجتماعی، صنفی، زیست‌محیطی، و… است توسط افرادی که قصد دارند قدم کوچکی بردارند برای بهتر شدن جامعه.
+                </div>
+            </div>
+            <div class="left-section container">
+                <div class="sponsors">
+                    <img class="" src="https://www.gilyamaha.com/wp-content/uploads/2022/10/enamad.png" alt="">
+                    <img class="" src="https://www.karzar.net/assets/img/footer/e-anjoman.png" alt="">
+                    <img class=" light-gray-bg" src="../../../static/image/logo.png" alt="">
+                    <img class=" gray-bg" src="https://www.karzar.net/assets/img/footer/ssl.png" alt="">
+                    <img class=" gray-bg" src="https://www.karzar.net/assets/img/footer/pars-pack.png" alt="">
+                    <img class=" gray-bg" src="https://www.karzar.net/assets/img/footer/iwmf.png?v2" alt="">
+                </div>
+                <div class="quick-links">
+                    <span>دسترسی های سریع</span>
+                    <div class="row">
+                        <a class="col-lg col-md-4 c-campaign" href="">ایجاد کارزار جدید</a>
+                        <a class="col-lg col-md-4" href="">قوانین و شرایط </a>
+                        <a class="col-lg col-md-4" href="">درباره ما</a>
+                        <a class="col-lg col-md-4" href="">رسانه های همراه</a>
+                        <a class="col-lg col-md-4" href="">مجله کارزار</a>
+                        <a class="col-lg col-md-4" href="">کارزار</a>
+                        <a class="col-lg col-md-4" href="">خانه</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer-middle">
+            <div class="logo">
+                <div class="d-flex">
+                    <div>
+                        <h1 class="navbar-title">کارزار</h1>
+                        <span class="navbar-des">بستر جمع آوری کارزارهای مستقل</span>
+                    </div>
+                    <img class="navbar-icon" src="https://www.karzar.net/assets/img/logo.png" />
+                </div>
+            </div>
+            <div class="social-media">
+                <div>
+                    <a href="">
+                        <img src="https://www.karzar.net/assets/img/socials/telegram.png" alt="">
+                    </a>
+                    <a href="">
+                        @Karzarnet
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="https://www.karzar.net/assets/img/socials/twitter.png" alt="">
+                    </a>
+                    <a href=""> @Karzarnet</a>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="https://www.karzar.net/assets/img/socials/instagram.png" alt="">
+                    </a>
+                    <a href="">
+                        @Karzarnet
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="https://www.karzar.net/assets/img/socials/clubhouse.png" alt="">
+                    </a>
+                    <a href="">
+                        Clubhouse
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="https://www.karzar.net/assets/img/socials/aparat.png" alt="">
+                    </a>
+                    <a href="">
+                        Aparat
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="https://www.karzar.net/assets/img/socials/rss.png" alt="">
+                    </a>
+                    <a href="">RSS</a>
+                </div>
+            </div>
+        </section>
+        <section class="footer-bottom">
+            <p class="copy-right">
+                تمام حقوق برای شرکت توسعه فناوری برخط کارزار محفوظ است.
+            </p>
+        </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

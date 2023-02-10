@@ -21,6 +21,7 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
+from user_app.views import HomePageView
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -35,6 +36,7 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [    
+    path('', HomePageView.as_view()),
     path('admin/', admin.site.urls),
     path('petitions/', include('petition_app.urls')),
     path('users/', include('user_app.urls')),

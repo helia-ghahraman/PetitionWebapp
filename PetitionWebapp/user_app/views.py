@@ -83,7 +83,7 @@ class HomePageView(LoginRequiredMixin, TemplateView):
         context = super(HomePageView, self).get_context_data(**kwargs)
         context['user'] = self.request.user
         return context
-
+        
 
 class ChangePasswordView(View):
     form_class = SetPasswordForm

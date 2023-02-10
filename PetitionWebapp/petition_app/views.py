@@ -2,7 +2,7 @@ import datetime
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.shortcuts import get_object_or_404
 from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
-                                  TemplateView, UpdateView)
+                                  View, UpdateView)
 
 from django.urls import reverse
 from .forms import PetitionForm
@@ -58,9 +58,7 @@ class PetitionListView(LoginRequiredMixin, ListView):
         return context
 
 
-class SignPetitionView(LoginRequiredMixin, TemplateView):
-    template_name = 'petition_app\petition_sign.html'
-
+class SignPetitionView(LoginRequiredMixin, View):
     def post(self, request, pk):
         petition = get_object_or_404(Petition, pk=pk)
         self.object = petition
@@ -68,9 +66,11 @@ class SignPetitionView(LoginRequiredMixin, TemplateView):
             petition.user_signed.add(request.user)
             petition.user_signed_count += 1
             petition.save()
+            return Response({'data': petition},
+                status=status.HTTP_200_OK)
         else:
-            # todo
-            pass
+            return Response({'message': 'This petition has been ended.'},
+                status=status.HTTP_400_BAD_REQUEST)
 
     def get_context_data(self, **kwargs):
         context = super(SignPetitionView, self).get_context_data(**kwargs)

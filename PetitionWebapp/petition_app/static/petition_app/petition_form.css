@@ -1,0 +1,592 @@
+@font-face {
+    font-family: IranSans;
+    src: local('IranSans'), url(../../../static/fonts/iransans/IRAN-SANS-Regular.ttf) format('truetype');
+}
+
+html {
+    min-height: 100%;
+    background: radial-gradient(circle, rgba(230,128,89,1) 0%, rgba(26,138,122,1) 100%);
+}
+
+form, input, select, textarea, label {
+    padding: 0;
+    margin: 20px;
+    outline: none;
+    font-family: IranSans;
+    font-size: 14px;
+    color: #666;
+    line-height: 22px;
+}
+
+body {
+    background: radial-gradient(circle, rgba(230,128,89,1) 0%, rgba(26,138,122,1) 100%);
+    font-family: IranSans;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+h1 {
+    position: absolute;
+    margin: 0;
+    font-size: 40px;
+    color: #fff;
+    z-index: 2;
+    line-height: 83px;
+}
+
+/*Header*/
+.navbar {
+    margin: 0 auto;
+}
+
+.li {
+    font-family: IranSans;
+}
+
+.dropdown-menu {
+    box-shadow: #25a69b81 0px 1px 1px, #25a69b79 0px 0px 1px 1px;
+}
+
+.dropdown {
+    font-family: IranSans;
+}
+
+.dropdown-menu .dropdown-item {
+    text-align: right;
+    color: #25a69b;
+}
+
+    .dropdown-menu .dropdown-item:hover {
+        color: black;
+    }
+
+.navbar .container {
+    height: 100px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    border-radius: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #cc7a00;
+}
+
+.navbar .container-fluid .navbar-collapse {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+    .navbar .container-fluid .navbar-collapse .d-flex {
+        align-items: center;
+        padding-top: 20px;
+    }
+
+        .navbar .container-fluid .navbar-collapse .d-flex div {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+        }
+
+.navbar-title {
+    font-size: 23px;
+    font-family: IranSans;
+}
+
+.navbar-icon {
+    height: 60px;
+    margin-top: 10px;
+    padding-top: 15px;
+}
+
+.nvbar-des {
+    color: rgb(87, 86, 86);
+}
+
+.navbar-nav button {
+    width: 75px;
+    background-color: white;
+    color: #25a69b;
+    border-radius: 8px;
+    padding: 4px 10px;
+    transition: all ease .3s;
+    border: none;
+    outline: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin: 0 5px;
+    justify-content: center;
+    font-family: IranSans;
+}
+
+.navbar-des {
+    cursor: default;
+}
+
+.navbar-nav .create-campaign-btn {
+    color: white;
+    background-color: #25a69b;
+}
+
+.navbar-expand-lg {
+    padding: 0 !important;
+    border-radius: 8px;
+}
+
+@media only screen and (max-width: 991px) {
+    .navbar .navbar-nav .container .container-fluid .navbar-collapse {
+        width: 20%;
+        align-content: center;
+    }
+
+    .d-flex img, .d-flex div {
+        display: none;
+    }
+
+    .navbar-expand-lg {
+        padding: 0 !important;
+    }
+
+    .navbar-nav button {
+        display: none;
+        border-radius: 5px;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .navbar .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    .navbar-expand-lg {
+        padding: 0 !important;
+    }
+
+    .navbar .container .collapse {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+/*log-sign part*/
+.testbox {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: inherit;
+    padding: 20px;
+    margin: auto;
+}
+
+form {
+    width: 100%;
+    padding: 20px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 0 8px #cc7a00;
+    align-content: flex-end;
+}
+
+.banner {
+    position: relative;
+    height: 300px;
+    background-image: url('../../../static/image/petition2.jpg');
+    background-size: cover;
+    background-position-y: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: IranSans;
+}
+
+    .banner::after {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.2);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+input, select, textarea {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input {
+    width: calc(100% - 10px);
+    padding: 5px;
+}
+
+    input[type="date"] {
+        padding: 4px 5px;
+    }
+
+textarea {
+    width: calc(100% - 12px);
+    padding: 5px;
+}
+
+.item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
+    color: #cc7a00;
+}
+
+.item input:hover, .item select:hover, .item textarea:hover {
+    border: 1px solid transparent;
+    box-shadow: 0 0 3px 0 #cc7a00;
+    color: #cc7a00;
+}
+
+.item {
+    position: relative;
+    margin: 10px;
+    align-items: flex-end;
+}
+
+    .item span {
+        color: red;
+    }
+
+    .item label {
+        float: right;
+    }
+
+    .item i, input[type="date"]::-webkit-calendar-picker-indicator {
+        position: absolute;
+        font-size: 20px;
+        color: #cc7a00;
+        text-align: right;
+        align-content: end;
+    }
+
+    .item i {
+        right: 1%;
+        top: 30px;
+        z-index: 1;
+    }
+
+[type="date"]::-webkit-calendar-picker-indicator {
+    right: 1%;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input[type=radio], input[type=checkbox] {
+    display: none;
+}
+
+label.radio {
+    position: relative;
+    display: inline-block;
+    margin: 5px 20px 15px 0;
+    cursor: pointer;
+}
+
+.question p {
+    float: right;
+    cursor: default;
+    padding-right: 25px;
+}
+
+.question span {
+    margin-left: 30px;
+}
+
+
+.question-answer {
+    padding-top: 20px;
+    display: flex;
+    justify-content: right;
+    flex-direction: row-reverse;
+}
+
+    .question-answer label {
+        display: block;
+    }
+
+label.radio:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    text-align: end;
+}
+
+input[type=radio]:checked + label:before, label.radio:hover:before {
+    border: 2px solid #cc7a00;
+}
+
+label.radio:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    right: 5px;
+    width: 8px;
+    height: 4px;
+    border: 3px solid #cc7a00;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+    opacity: 0;
+}
+
+input[type=radio]:checked + label:after {
+    opacity: 1;
+}
+
+.btn-block {
+    margin-top: 10px;
+    text-align: center;
+}
+
+button {
+    width: 130px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #f26f1d;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+    button:hover {
+        background: #ee7a4d;
+        border: 2px solid black;
+    }
+
+@media (min-width: 568px) {
+    .name-item, .city-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+        .name-item input, .name-item div {
+            width: calc(50% - 20px);
+        }
+
+            .name-item div input {
+                width: 97%;
+            }
+
+            .name-item div label {
+                display: block;
+                padding-bottom: 5px;
+            }
+}
+
+/* footer */
+footer {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #cc7a00;
+    background-color: #dbdbdb;
+}
+
+.footer-top {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    /* gap:10px; */
+    background-color: #ededed;
+    /* border:1px red solid; */
+    /* padding-top:10px; */
+    /* padding-bottom: 10px; */
+    padding: 10px;
+    flex-direction: row-reverse;
+}
+
+    .footer-top .left-section {
+        flex: 4;
+        display: flex;
+        padding: 0;
+        align-items: flex-end;
+        justify-content: space-around;
+        /* align-items:stretch; */
+        /* justify-content:space-between; */
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-top .right-section {
+        flex: 1;
+    }
+
+    .footer-top .about-karzar {
+        line-height: 29px;
+        font-size: 18px;
+        text-align: right;
+    }
+
+    .footer-top .sponsors {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+        .footer-top .sponsors > * {
+            background-color: white;
+            height: 150px;
+            border-radius: 10px;
+            gap: 5px;
+            margin-top: 5px;
+        }
+
+        .footer-top .sponsors .gray-bg {
+            background-color: #6f6f6f;
+        }
+
+        .footer-top .sponsors .light-gray-bg {
+            background-color: #cecece;
+        }
+
+    .footer-top .quick-links .c-campaign {
+        color: rgb(47, 235, 47);
+    }
+
+    .footer-top .quick-links a:hover {
+        color: rgb(247, 55, 55);
+    }
+
+    .footer-top .quick-links a {
+        text-decoration: none;
+        color: rgb(7, 10, 99);
+        list-style: none;
+        transition: all ease .5s;
+        text-align: right;
+        font-family: IranSans;
+    }
+
+    .footer-top .quick-links span {
+        text-align: right;
+        font-family: IranSans;
+    }
+
+    .footer-top .quick-links {
+        /* border:1px rgb(31, 104, 177) solid; */
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: white;
+        padding: 20px 10px;
+        font-size: 19px;
+        line-height: 30px;
+        border-radius: 5px;
+    }
+
+        .footer-top .quick-links .row {
+            flex: 7;
+        }
+
+        .footer-top .quick-links span {
+            flex: 1;
+        }
+
+@media only screen and (max-width: 1392px) {
+    .footer-top .sponsors > * {
+        height: 120px;
+    }
+}
+
+@media only screen and (max-width: 1138px) {
+    .footer-top {
+        flex-direction: column;
+    }
+
+        .footer-top .sponsors {
+            align-items: center;
+            justify-content: space-around;
+        }
+
+            .footer-top .sponsors > * {
+                height: 110px;
+            }
+}
+
+@media only screen and (max-width : 991px) {
+    .footer-top .quick-links {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 813px) {
+
+    .footer-top {
+        flex-direction: column;
+    }
+
+        .footer-top .sponsors {
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+
+            .footer-top .sponsors > * {
+                height: 110px;
+                gap: 30px;
+            }
+}
+
+
+
+.footer-middle {
+    background-color: #ededed;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+    .footer-middle .d-flex {
+        gap: 10px;
+    }
+
+        .footer-middle .d-flex img {
+            width: 100px;
+            height: 100px;
+            filter: grayscale(100%);
+        }
+
+    .footer-middle .social-media {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+        .footer-middle .social-media div {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding: 5px;
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            align-items: center;
+            justify-content: center;
+        }
+
+.footer-bottom {
+    background-color: #dbdbdb;
+    text-align: center;
+}
+
+    .footer-bottom p {
+        padding: 10px;
+    }
+
+.select-intro {
+    width: 100%;
+}

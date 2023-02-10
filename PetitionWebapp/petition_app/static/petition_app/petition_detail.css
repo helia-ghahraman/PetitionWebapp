@@ -1,0 +1,496 @@
+@font-face {
+    font-family: IranSans;
+    src: local('IranSans'), url(../../../static/fonts/iransans/IRAN-SANS-Regular.ttf) format('truetype');
+}
+
+html {
+    min-height: 100%;
+    background: radial-gradient(circle, rgba(230,128,89,1) 0%, rgba(26,138,122,1) 100%);
+}
+
+form, input, select, textarea, label {
+    padding: 0;
+    margin: 20px;
+    outline: none;
+    font-family: IranSans;
+    font-size: 14px;
+    color: #666;
+    line-height: 22px;
+   
+}
+
+body {
+    background: radial-gradient(circle, rgba(230,128,89,1) 0%, rgba(26,138,122,1) 100%);
+    font-family: IranSans;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+h1 {
+    position: absolute;
+    margin: 0;
+    font-size: 40px;
+    color: #fff;
+    z-index: 2;
+    line-height: 83px;
+}
+h1 {
+    position: absolute;
+    margin: 0;
+    font-size: 40px;
+    color: #fff;
+    z-index: 2;
+    line-height: 83px;
+}
+
+/*Header*/
+.navbar {
+    margin: 0 auto;
+}
+
+.li {
+    font-family: IranSans;
+}
+
+.dropdown-menu {
+    box-shadow: #25a69b81 0px 1px 1px, #25a69b79 0px 0px 1px 1px;
+}
+
+.dropdown {
+    font-family: IranSans;
+}
+
+.dropdown-menu .dropdown-item {
+    text-align: right;
+    color: #25a69b;
+}
+
+    .dropdown-menu .dropdown-item:hover {
+        color: black;
+    }
+
+.navbar .container {
+    height: 100px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    border-radius: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #cc7a00;
+}
+
+.navbar .container-fluid .navbar-collapse {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+    .navbar .container-fluid .navbar-collapse .d-flex {
+        align-items: center;
+        padding-top: 20px;
+    }
+
+        .navbar .container-fluid .navbar-collapse .d-flex div {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+        }
+
+.navbar-title {
+    font-size: 23px;
+    font-family: IranSans;
+}
+
+.navbar-icon {
+    height: 60px;
+    margin-top: 10px;
+    padding-top: 15px;
+}
+
+.nvbar-des {
+    color: rgb(87, 86, 86);
+}
+
+.navbar-nav button {
+    width: 75px;
+    background-color: white;
+    color: #25a69b;
+    border-radius: 8px;
+    padding: 4px 10px;
+    transition: all ease .3s;
+    border: none;
+    outline: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin: 0 5px;
+    justify-content: center;
+    font-family: IranSans;
+}
+
+.navbar-des {
+    cursor: default;
+}
+
+.navbar-nav .create-campaign-btn {
+    color: white;
+    background-color: #25a69b;
+}
+
+.navbar-expand-lg {
+    padding: 0 !important;
+    border-radius: 8px;
+}
+
+@media only screen and (max-width: 991px) {
+    .navbar .navbar-nav .container .container-fluid .navbar-collapse {
+        width: 20%;
+        align-content: center;
+    }
+
+    .d-flex img, .d-flex div {
+        display: none;
+    }
+
+    .navbar-expand-lg {
+        padding: 0 !important;
+    }
+
+    .navbar-nav button {
+        display: none;
+        border-radius: 5px;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .navbar .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    .navbar-expand-lg {
+        padding: 0 !important;
+    }
+
+    .navbar .container .collapse {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+/*mainBody*/
+.testbox {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: inherit;
+    padding: 20px;
+    margin: auto;
+}
+
+form {
+    width: 100%;
+    padding: 20px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 0 8px #cc7a00;
+}
+
+.inside {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.avatar {
+    border: 1px solid #c0e347;
+    border-radius: 40%;
+    height: 250px;
+
+    width: auto;
+    margin:auto;
+}
+
+.card-deck, row {
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+    .card:hover {
+        box-shadow: 10px 27px 29px 6px rgba(0,0,0,0.75);
+    }
+
+.card-body {
+    margin: auto;
+}
+
+button {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #f26f1d;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+    button:hover {
+        background: #ff9800;
+        border: 2px solid black;
+    }
+
+.users {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    height: max-content;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow: auto;
+    gap: 10px;
+    margin-bottom:100px;
+}
+.user-img {
+    border-radius: 50%;
+    border: 2px solid #ef8e27;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user-name{
+    font-family:IranSans;
+}
+.user-preview {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 5px;
+    box-sizing: border-box;
+}
+.topic {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    padding: 15px 0;
+    border: dashed #28a745;
+    width: 96%;
+    margin:20px;
+}
+.special-users .topic h2 {
+    color: #848484;
+    margin: 18px 0;
+}
+@media (max-width: 800px) {
+    .users {
+        flex-direction: column;
+    }
+}
+/* footer */
+footer {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #cc7a00;
+    background-color: #dbdbdb;
+}
+
+.footer-top {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    /* gap:10px; */
+    background-color: #ededed;
+    /* border:1px red solid; */
+    /* padding-top:10px; */
+    /* padding-bottom: 10px; */
+    padding: 10px;
+    flex-direction: row-reverse;
+}
+
+    .footer-top .left-section {
+        flex: 4;
+        display: flex;
+        padding: 0;
+        align-items: flex-end;
+        justify-content: space-around;
+        /* align-items:stretch; */
+        /* justify-content:space-between; */
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-top .right-section {
+        flex: 1;
+    }
+
+    .footer-top .about-karzar {
+        line-height: 29px;
+        font-size: 18px;
+        text-align: right;
+    }
+
+    .footer-top .sponsors {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+        .footer-top .sponsors > * {
+            background-color: white;
+            height: 150px;
+            border-radius: 10px;
+            gap: 5px;
+            margin-top: 5px;
+        }
+
+        .footer-top .sponsors .gray-bg {
+            background-color: #6f6f6f;
+        }
+
+        .footer-top .sponsors .light-gray-bg {
+            background-color: #cecece;
+        }
+
+    .footer-top .quick-links .c-campaign {
+        color: rgb(47, 235, 47);
+    }
+
+    .footer-top .quick-links a:hover {
+        color: rgb(247, 55, 55);
+    }
+
+    .footer-top .quick-links a {
+        text-decoration: none;
+        color: rgb(7, 10, 99);
+        list-style: none;
+        transition: all ease .5s;
+        text-align: right;
+        font-family: IranSans;
+    }
+
+    .footer-top .quick-links span {
+        text-align: right;
+        font-family: IranSans;
+    }
+
+    .footer-top .quick-links {
+        /* border:1px rgb(31, 104, 177) solid; */
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: white;
+        padding: 20px 10px;
+        font-size: 19px;
+        line-height: 30px;
+        border-radius: 5px;
+    }
+
+        .footer-top .quick-links .row {
+            flex: 7;
+        }
+
+        .footer-top .quick-links span {
+            flex: 1;
+        }
+
+@media only screen and (max-width: 1392px) {
+    .footer-top .sponsors > * {
+        height: 120px;
+    }
+}
+
+@media only screen and (max-width: 1138px) {
+    .footer-top {
+        flex-direction: column;
+    }
+
+        .footer-top .sponsors {
+            align-items: center;
+            justify-content: space-around;
+        }
+
+            .footer-top .sponsors > * {
+                height: 110px;
+            }
+}
+
+@media only screen and (max-width : 991px) {
+    .footer-top .quick-links {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 813px) {
+
+    .footer-top {
+        flex-direction: column;
+    }
+
+        .footer-top .sponsors {
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+
+            .footer-top .sponsors > * {
+                height: 110px;
+                gap: 30px;
+            }
+}
+
+
+
+.footer-middle {
+    background-color: #ededed;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+    .footer-middle .d-flex {
+        gap: 10px;
+    }
+
+        .footer-middle .d-flex img {
+            width: 100px;
+            height: 100px;
+            filter: grayscale(100%);
+        }
+
+    .footer-middle .social-media {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+        .footer-middle .social-media div {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding: 5px;
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            align-items: center;
+            justify-content: center;
+        }
+
+.footer-bottom {
+    background-color: #dbdbdb;
+    text-align: center;
+}
+
+    .footer-bottom p {
+        padding: 10px;
+    }
