@@ -16,7 +16,7 @@
         {% include "./header-section.html" %}
 
         <!-- Card deck -->
-        <form action="/" class="card-deck row">
+        <form method="post" class="card-deck row">
             {% csrf_token %}
             <div class="inside">
                 <!-- Card -->
@@ -71,7 +71,7 @@
                             </div>
 
                         </div>
-                        <form method="get">
+                        <form method="post">
                             {% csrf_token %}
                             <div class="btn-block">
                                 <button onclick="myFunction()" type="submit" href="{% url 'index' %}">امضا</button>
@@ -79,11 +79,10 @@
                         </form>
                         <script>
                             function myFunction() {
-                                var txt;
                                 if (confirm("Are you sure you want to sign the petition?")) {
-                                    href = "petitionDetailes.html";
+                                    href = "{% url 'petition_app:petitions-detail' %}";
                                 } else {
-                                    href = "mainPage.html";
+                                    href = "{% url 'index' %}";
                                 }
                             }
                         </script>
@@ -91,9 +90,9 @@
                 </div>
             </div>
             <!-- Card -->
-            <!--users who signed the oetition-->
+            <!--users who signed the petition-->
             <div class="topic">
-                <button style="float: left; margin-right: 50px; font-family: IranSans;margin:20px;" onclick="window.location.href='log-in.html';">عضو شوید</button>
+                <button style="float: left; margin-right: 50px; font-family: IranSans;margin:20px;" onclick="window.location.href='{% url 'petition_app:user-login' %}';">عضو شوید</button>
                 <h2 style=" font-family: IranSans;direction:rtl;text-align:right;margin:20px;">افرادی که از این کارزار حمایت کرده‌اند:</h2>
             </div>
             <div class="users">

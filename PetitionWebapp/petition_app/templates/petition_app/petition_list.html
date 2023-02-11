@@ -12,11 +12,10 @@
 </head>
 <body>
 
-    {% include "./header-section.html" %}     
-
+    {% include "./header-section.html" %}
     
         <!--middlePart-->
-        <form action="/">
+        <form method="post">
             {% csrf_token %}
             <!-----------------  SearchBar Section---------------->
             <section class="search-box ">
@@ -29,11 +28,9 @@
             <div class="campaign-category__newest">
                 ترتیب:
                 <select class="campaign-category-select campaign-category-select_new">
-
                     <option value="https://www.karzar.net/campaigns?sortBy=newest" selected="">جدیدترین‌ها</option>
                     <option value="https://www.karzar.net/campaigns?sortBy=mostSigned">پرامضاترین‌ها</option>
                     <option value="https://www.karzar.net/campaigns?sortBy=mostPopular">محبوبترین‌ها</option>
-
                 </select>
             </div>
             <section class="selected-campaigns campaigns-list">
@@ -51,7 +48,7 @@
                                 <div class="campaign-card-image_container">
                                     <img class="campaign-card-image" src="https://www.karzar.net/campaign-images/defaults/91x91_4.jpeg">
                                 </div>
-                                <a href="petitionDetailes.html"><img class="signiture-icon" src="./image/signature.png" alt=""></a>
+                                <a href="{% url 'petition_app:petitions-detail' %}"><img class="signiture-icon" src="./image/signature.png" alt=""></a>
                             </div>
                             <div class="campaign-card-bottom">
                                 <div class="campaign-card-title">
@@ -72,7 +69,7 @@
                                 <div class="campaign-card-image_container">
                                     <img class="campaign-card-image" src="https://www.karzar.net/uploads/thumbs//campaigns/2023/02/91x91_16756860175ki8gqalp3yqclely9lcku0nhwepvp97tjio02ui.jpg">
                                 </div>
-                                <a href="petitionDetailes.html"><img class="signiture-icon" src="./image/signature.png" alt=""></a>
+                                <a href="{% url 'petition_app:petitions-detail' %}"><img class="signiture-icon" src="./image/signature.png" alt=""></a>
                             </div>
                             <div class="campaign-card-bottom">
                                 <div>
@@ -97,7 +94,7 @@
                                 <div class="campaign-card-image_container">
                                     <img class="campaign-card-image" src="https://www.karzar.net/uploads/thumbs//campaigns/2021/09/91x91_1239general-staff-of-the-armed-forces-of-the-islamic-republic-of-iran.jpg">
                                 </div>
-                                <a href="petitionDetailes.html"><img class="signiture-icon" src="./image/signature.png" alt=""></a>
+                                <a href="{% url 'petition_app:petitions-detail' %}"><img class="signiture-icon" src="./image/signature.png" alt=""></a>
                             </div>
                             <div class="campaign-card-bottom">
                                 <div class="campaign-card-title">
@@ -123,7 +120,7 @@
                                 <div class="campaign-card-image_container">
                                     <img class="campaign-card-image" src="https://www.karzar.net/uploads/thumbs//campaigns/2022/07/91x91_11528189590_438.jpg">
                                 </div>
-                                <a href="petitionDetailes.html"><img class="signiture-icon" src="./image/signature.png" alt=""></a>
+                                <a href="{% url 'petition_app:petitions-detail' %}"><img class="signiture-icon" src="./image/signature.png" alt=""></a>
                             </div>
                             <div class="campaign-card-bottom">
                                 <div class="campaign-card-title">
@@ -143,7 +140,7 @@
                                 <div class="campaign-card-image_container">
                                     <img class="campaign-card-image" src="https://www.karzar.net/uploads/thumbs//campaigns/2023/02/91x91_0522pezeshk.jpg">
                                 </div>
-                                <a href="petitionDetailes.html"><img class="signiture-icon" src="./image/signature.png" alt=""></a>
+                                <a href="{% url 'petition_app:petitions-detail' %}"><img class="signiture-icon" src="./image/signature.png" alt=""></a>
                             </div>
                             <div class="campaign-card-bottom">
                                 <div>
@@ -165,7 +162,7 @@
                                 <div class="campaign-card-image_container">
                                     <img class="campaign-card-image" src="https://www.karzar.net/campaign-images/defaults/91x91_3.jpeg">
                                 </div>
-                                <a href="petitionDetailes.html"><img class="signiture-icon" src="./image/signature.png" alt=""></a>
+                                <a href="{% url 'petition_app:petitions-detail' %}"><img class="signiture-icon" src="./image/signature.png" alt=""></a>
                             </div>
                             <div class="campaign-card-bottom">
                                 <div class="campaign-card-title">

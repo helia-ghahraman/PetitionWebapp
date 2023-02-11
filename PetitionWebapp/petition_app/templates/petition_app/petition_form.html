@@ -19,29 +19,21 @@
         <form method="post">
             {% csrf_token %}
             <div class="item">
-                <label for="name"><span>*</span>نام و نام خانوادگی شما</label>
-                <input id="name" type="text" name="name" required />
-            </div>
-            <div class="item">
-                <label for="phone"><span>*</span>شماره موبایل شما</label>
-                <input id="phone" type="number" name="phone" required />
+                <label for="name"><span>*</span>نام کاربری شما</label>
+                <input id="name" type="text" name="name" value="{{ petition.user_created }}" required />
             </div>
             <div class="item">
                 <label for="title"><span>*</span>عنوان کارزار</label>
-                <input id="title" type="text" name="title" required />
+                <input id="title" type="text" name="title" value="{{ petition.name }}" required />
             </div>
             <div class="item">
                 <label for="content">متن کارزار</label>
-                <textarea id="content" name="content" rows="4" cols="50">
+                <textarea id="content" name="content" value="{{ petition.content }}" rows="4" cols="50">
                 </textarea>
             </div>
             <div class="item">
                 <label for="password"><span>*</span>کد دریافتی در پیامک</label>
                 <input id="password" type="text" name="password" required />
-            </div>
-            <div class="item">
-                <label for="writer-name"><span>*</span>نام نویسنده</label>
-                <input id="writer-name" type="text" name="writer-name" required />
             </div>
 
             <div class="item">
@@ -51,17 +43,12 @@
 
             <div class="item">
                 <label for="myFile">تصویر کارزار</label>
-                <input type="file" id="myFile" name="filename">
-            </div>
-
-            <div class="item">
-                <label for="hashtag"><span>*</span>هشتگ رسمی این کارزار</label>
-                <input id="hashtag" type="name" name="hashtag" required />
+                <input type="file" id="myFile" name="filename" value="{{ petition.image }}">
             </div>
 
             <div class="item">
                 <label for="date"><span>*</span>تاریخ پایان کارزار</label>
-                <input type="date" id="date" name="date">
+                <input type="date" id="date" name="date" value="{{ petition.end_datetime }}">
             </div>
 
             <div class="item">
@@ -69,10 +56,6 @@
                 <input id="fields" type="name" name="name" required />
             </div>
 
-            <div class="item">
-                <label for="email"><span>*</span>ایمیل</label>
-                <input id="email" type="email" name="email" required />
-            </div>
             <div class="item">
                 <label for="introduce"><span>*</span>روش آشنا شدن شما با کارزار</label>
                 <br>
