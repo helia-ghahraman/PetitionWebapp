@@ -1,5 +1,6 @@
 
 <form method="get">
+    {% csrf_token %}
     {{ filterset.form.as_p }}
     <input type="submit" />
 </form>

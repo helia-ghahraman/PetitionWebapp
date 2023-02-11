@@ -2,7 +2,7 @@ import datetime
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.shortcuts import get_object_or_404
 from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
-                                  View, UpdateView)
+                                  View, UpdateView, TemplateView)
 
 from django.urls import reverse
 from .forms import PetitionForm
@@ -80,3 +80,12 @@ class SignPetitionView(LoginRequiredMixin, View):
 
     def get_success_url(self):
         return reverse('petition_app:petitions-list')
+
+
+class RuleView(TemplateView):
+    template_name = 'petition_app/rules.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(RuleView, self).get_context_data(**kwargs)
+        context['user'] = self.request.user
+        return context

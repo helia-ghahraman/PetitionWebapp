@@ -22,6 +22,7 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
 from user_app.views import HomePageView
+from petition_app.views import RuleView
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -36,7 +37,8 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [    
-    path('', HomePageView.as_view()),
+    path('', HomePageView.as_view(), name='index'),
+    path('rules/', RuleView.as_view(), name='rules'),
     path('admin/', admin.site.urls),
     path('petitions/', include('petition_app.urls')),
     path('users/', include('user_app.urls')),

@@ -1,10 +1,193 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <title>Petition List</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./petitionList.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
 
+    {% include "./header-section.html" %}     
+
+    
+        <!--middlePart-->
+        <form action="/">
+            {% csrf_token %}
+            <!-----------------  SearchBar Section---------------->
+            <section class="search-box ">
+                <div class="container">
+                    <input type="text" placeholder="موضوع کارزار یا کد آن را وارد کنید.">
+                    <button>جست و جو</button>
+                </div>
+            </section>
+            <!-----------------   selected campaigns Section ---------------->
+            <div class="campaign-category__newest">
+                ترتیب:
+                <select class="campaign-category-select campaign-category-select_new">
+
+                    <option value="https://www.karzar.net/campaigns?sortBy=newest" selected="">جدیدترین‌ها</option>
+                    <option value="https://www.karzar.net/campaigns?sortBy=mostSigned">پرامضاترین‌ها</option>
+                    <option value="https://www.karzar.net/campaigns?sortBy=mostPopular">محبوبترین‌ها</option>
+
+                </select>
+            </div>
+            <section class="selected-campaigns campaigns-list">
+                <div class="container container">
+                    <div class="topic">
+                        <h2 style=" font-family: IranSans;direction:rtl;text-align:right;margin:20px;">کارزار های برگزیده</h2>
+                    </div>
+                    <div class="row">
+                        <div class="campaign-card col-xl-4 col-sm-12">
+                            <div class="campaign-card-top">
+                                <span>
+                                    نفر امضا کردند
+                                </span>
+                                <span>235</span>
+                                <div class="campaign-card-image_container">
+                                    <img class="campaign-card-image" src="https://www.karzar.net/campaign-images/defaults/91x91_4.jpeg">
+                                </div>
+                                <a href="petitionDetailes.html"><img class="signiture-icon" src="./image/signature.png" alt=""></a>
+                            </div>
+                            <div class="campaign-card-bottom">
+                                <div class="campaign-card-title">
+                                    درخواست انتشار لیست مسافرین قطر و شفافیت در خصوص هزینه‌های صورت گرفته
+
+                                </div>
+                                <div class="campaign-card-signs">
+                                    از طرف عموم مردم
+                                </div>
+                            </div>
+                        </div>
+                        <div class="campaign-card col-xl-4 col-sm-12">
+                            <div class="campaign-card-top blue-bg">
+                                <span>
+                                    نفر امضا کردند
+                                </span>
+                                <span>235</span>
+                                <div class="campaign-card-image_container">
+                                    <img class="campaign-card-image" src="https://www.karzar.net/uploads/thumbs//campaigns/2023/02/91x91_16756860175ki8gqalp3yqclely9lcku0nhwepvp97tjio02ui.jpg">
+                                </div>
+                                <a href="petitionDetailes.html"><img class="signiture-icon" src="./image/signature.png" alt=""></a>
+                            </div>
+                            <div class="campaign-card-bottom">
+                                <div>
+                                    <div class="campaign-card-title">
+                                        درخواست ثبت بناهای ارزشمند در معرض تخریب بافت تاریخی شیراز
+                                    </div>
+                                </div>
+                                <div class="campaign-card-signs">
+                                    از طرف عموم مردم
+                                </div>
+                            </div>
+                        </div>
+                        <div class="campaign-card col-xl-4 col-sm-12">
+                            <div class="campaign-card-top">
+                                <span>
+                                    نفر امضا کردند
+                                </span>
+                                <span>235</span>
+                                <div class="special-compaign">
+                                    ویژه&#9733
+                                </div>
+                                <div class="campaign-card-image_container">
+                                    <img class="campaign-card-image" src="https://www.karzar.net/uploads/thumbs//campaigns/2021/09/91x91_1239general-staff-of-the-armed-forces-of-the-islamic-republic-of-iran.jpg">
+                                </div>
+                                <a href="petitionDetailes.html"><img class="signiture-icon" src="./image/signature.png" alt=""></a>
+                            </div>
+                            <div class="campaign-card-bottom">
+                                <div class="campaign-card-title">
+                                    درخواست جایگزینی طرح جمع‌آوری سگ‌های بلاصاحب با طرح عقیم سازی
+                                </div>
+
+                                <div>
+                                    <div class="campaign-card-signs">
+                                        از طرف عموم مردم
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="campaign-card col-xl-4 col-sm-12">
+                            <div class="campaign-card-top blue-bg">
+                                <p>
+                                    نفر امضا کردند
+                                </p>
+                                <p>
+                                    <span>235</span>
+                                    <span>نفر</span>
+                                </p>
+                                <div class="campaign-card-image_container">
+                                    <img class="campaign-card-image" src="https://www.karzar.net/uploads/thumbs//campaigns/2022/07/91x91_11528189590_438.jpg">
+                                </div>
+                                <a href="petitionDetailes.html"><img class="signiture-icon" src="./image/signature.png" alt=""></a>
+                            </div>
+                            <div class="campaign-card-bottom">
+                                <div class="campaign-card-title">
+                                    درخواست انتشار لیست مسافرین قطر و شفافیت در خصوص هزینه‌های صورت گرفته
+                                </div>
+                                <div class="campaign-card-signs">
+                                    از طرف عموم مردم
+                                </div>
+                            </div>
+                        </div>
+                        <div class="campaign-card col-xl-4 col-sm-12">
+                            <div class="campaign-card-top blue-bg">
+                                <span>
+                                    نفر امضا کردند
+                                </span>
+                                <span>235</span>
+                                <div class="campaign-card-image_container">
+                                    <img class="campaign-card-image" src="https://www.karzar.net/uploads/thumbs//campaigns/2023/02/91x91_0522pezeshk.jpg">
+                                </div>
+                                <a href="petitionDetailes.html"><img class="signiture-icon" src="./image/signature.png" alt=""></a>
+                            </div>
+                            <div class="campaign-card-bottom">
+                                <div>
+                                    <div class="campaign-card-title">
+                                        درخواست ثبت بناهای ارزشمند در معرض تخریب بافت تاریخی شیراز
+                                    </div>
+                                </div>
+                                <div class="campaign-card-signs">
+                                    از طرف عموم مردم
+                                </div>
+                            </div>
+                        </div>
+                        <div class="campaign-card col-xl-4 col-sm-12">
+                            <div class="campaign-card-top blue-bg">
+                                <span>
+                                    نفر امضا کردند
+                                </span>
+                                <span>235</span>
+                                <div class="campaign-card-image_container">
+                                    <img class="campaign-card-image" src="https://www.karzar.net/campaign-images/defaults/91x91_3.jpeg">
+                                </div>
+                                <a href="petitionDetailes.html"><img class="signiture-icon" src="./image/signature.png" alt=""></a>
+                            </div>
+                            <div class="campaign-card-bottom">
+                                <div class="campaign-card-title">
+                                    درخواست جایگزینی طرح جمع‌آوری سگ‌های بلاصاحب با طرح عقیم سازی
+                                </div>
+
+                                <div>
+                                    <div class="campaign-card-signs">
+                                        از طرف عموم مردم
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </form>
+
+        {% include "./footer-section.html" %}     
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    </div>
 </body>
 </html>

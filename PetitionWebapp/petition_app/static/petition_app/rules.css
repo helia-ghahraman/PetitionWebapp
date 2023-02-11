@@ -33,8 +33,8 @@ h1 {
     color: #fff;
     z-index: 2;
     line-height: 83px;
-    font-family: IranSans;
 }
+
 /*Header*/
 .navbar {
     margin: 0 auto;
@@ -55,7 +55,6 @@ h1 {
 .dropdown-menu .dropdown-item {
     text-align: right;
     color: #25a69b;
-    font-family: IranSans;
 }
 
     .dropdown-menu .dropdown-item:hover {
@@ -170,8 +169,7 @@ h1 {
     }
 }
 
-/*middlePart*/
-
+/*log-sign part*/
 .testbox {
     display: flex;
     justify-content: space-around;
@@ -190,6 +188,27 @@ form {
     box-shadow: 0 0 8px #cc7a00;
     align-content: flex-end;
 }
+
+.banner {
+    position: relative;
+    height: 300px;
+    background-image: url('image/petition2.jpg');
+    background-size: cover;
+    background-position-y: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: IranSans;
+}
+
+    .banner::after {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.2);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
 
 input, select, textarea {
     margin-bottom: 10px;
@@ -222,17 +241,17 @@ textarea {
 }
 
 .item {
-    display: flex;
-    justify-content: right;
-    flex-direction: column;
     position: relative;
     margin: 10px;
     align-items: flex-end;
 }
 
+    .item span {
+        color: red;
+    }
+
     .item label {
         float: right;
-        font-family: IranSans;
     }
 
     .item i, input[type="date"]::-webkit-calendar-picker-indicator {
@@ -267,35 +286,57 @@ label.radio {
     cursor: pointer;
 }
 
-    label.radio:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 17px;
-        height: 17px;
-        border-radius: 50%;
-        border: 2px solid #ccc;
-        text-align: end;
+.question p {
+    float: right;
+    cursor: default;
+    padding-right: 25px;
+}
+
+.question span {
+    margin-left: 30px;
+}
+
+
+.question-answer {
+    padding-top: 20px;
+    display: flex;
+    justify-content: right;
+    flex-direction: row-reverse;
+}
+
+    .question-answer label {
+        display: block;
     }
 
-    input[type=radio]:checked + label:before, label.radio:hover:before {
-        border: 2px solid #cc7a00;
-    }
+label.radio:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    text-align: end;
+}
 
-    label.radio:after {
-        content: "";
-        position: absolute;
-        top: 6px;
-        left: 5px;
-        right: 5px;
-        width: 8px;
-        height: 4px;
-        border: 3px solid #cc7a00;
-        border-top: none;
-        border-right: none;
-        transform: rotate(-45deg);
-        opacity: 0;
-    }
+input[type=radio]:checked + label:before, label.radio:hover:before {
+    border: 2px solid #cc7a00;
+}
+
+label.radio:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    right: 5px;
+    width: 8px;
+    height: 4px;
+    border: 3px solid #cc7a00;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+    opacity: 0;
+}
 
 input[type=radio]:checked + label:after {
     opacity: 1;
@@ -315,7 +356,6 @@ button {
     font-size: 16px;
     color: #fff;
     cursor: pointer;
-    font-family: IranSans;
 }
 
     button:hover {
@@ -547,331 +587,46 @@ footer {
         padding: 10px;
     }
 
-
-
-.main-content-new_petition_body {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
+.fulltext {
     direction: rtl;
+    text-align: justify;
+    font-family: IranSans;
+}
+
+.text-list {
+    align-items: end;
+    font-family: IranSans;
     font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-    color: #676767;
-    box-sizing: border-box;
-    font-family: IRAN,verdana,tahoma;
-    display: block;
-    padding-top: 50px;
-    padding-right: 50px;
-    padding-bottom: 50px;
-    padding-left: 50px;
-    /* re */
+    line-height: 22px;
+    float: right;
+    align-content: end;
 }
-
-.campaign-section-title .theme-color {
-    font-weight: 700;
-}
-
-.theme-color {
-    color: #25a69b;
-}
-
-.theme-color {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    direction: rtl;
-    font-size: 26px;
-    line-height: 43px;
-    box-sizing: border-box;
-    font-family: IRAN,verdana,tahoma;
-    color: #25a69b;
-    font-weight: 700;
-}
-
-.campaign-section-title__logo {
-    margin-left: 12px;
-    width: 50px;
-}
-
-.campaign-section-title {
-    align-items: center;
-    color: #aaa;
-    display: flex;
-    font-size: 26px;
-    justify-content: center;
-    line-height: 43px;
-    margin-bottom: 48px;
-}
-
-.campaign-section-title__logo {
-    margin-left: 12px;
-    width: 50px;
-}
-
-* {
-    font-family: IRAN,verdana,tahoma;
-}
-
-.new_petition_p {
-    margin: 0 0 10px;
-}
-
-.campaign-section-list {
-    color: #676767;
-    font-weight: 700;
-    list-style: none;
-    margin: 0 0 48px;
-    padding: 0;
-}
-
-.campaign-section-list__item {
-    margin-bottom: 6px;
-}
-
-.row {
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-.col-lg-12 {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    direction: rtl;
+.text-list li {
+    text-align:right;
+    direction:rtl;
+    align-items: end;
+    font-family: IranSans;
     font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-    color: #676767;
-    box-sizing: border-box;
-    font-family: IRAN,verdana,tahoma;
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
+    line-height: 22px;
+    float: right;
+    align-content: end;
 }
 
-form {
-    display: block;
-    margin-top: 0em;
-    margin-block-end: 1em;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.campaign-section-agreement {
-    align-items: center;
-    background-color: #eff7f6;
-    border-radius: 10px;
-    color: #25a69b;
-    display: flex;
-    flex: 1;
-    padding: 8px 12px 8px 8px;
-}
-
-
-
-input[type=checkbox], input[type=radio] {
-    height: 22px;
-    line-height: unset;
-    margin-left: 2px;
+ol {
     margin-top: 0;
-    vertical-align: middle;
+    margin-bottom: 10px;
 }
 
-input[type=radio], input[type=checkbox] {
-    margin: 4px 0 0;
-    margin-top: 1px \9;
-    line-height: normal;
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
 }
 
-input[type=checkbox], input[type=radio] {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0;
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
 }
 
-.campaigns-wizard-item__checkbox {
-    display: none;
-}
-
-input {
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 12px;
-}
-
-input, button, select, textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-}
-
-input {
-    line-height: normal;
-}
-
-button, input, optgroup, select, textarea {
-    margin: 0;
-    font: inherit;
-    color: inherit;
-}
-
-* {
-    font-family: IRAN,verdana,tahoma;
-}
-
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-user agent stylesheet
-input:not([type="image" i]) {
-    box-sizing: border-box;
-}
-
-user agent stylesheet
-input[type="checkbox" i] {
-    background-color: initial;
-    cursor: default;
-    appearance: auto;
-    box-sizing: border-box;
-    margin: 3px 3px 3px 4px;
-    padding: initial;
-    border: initial;
-}
-
-user agent stylesheet
-input {
-    writing-mode: horizontal-tb !important;
-    /* font-style:;
-    font-variant-ligatures:;
-    font-variant-caps:;
-    font-variant-numeric:;
-    font-variant-east-asian:;
-    font-weight:;
-    font-stretch:;
-    font-size:;
-    font-family:; */
-    text-rendering: auto;
-    color: fieldtext;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    appearance: auto;
-    -webkit-rtl-ordering: logical;
-    cursor: text;
-    background-color: field;
-    margin: 0em;
-    padding: 1px 2px;
-    border-width: 2px;
-    border-style: inset;
-    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-    border-image: initial;
-}
-
-
-
-.campaigns-wizard-item__checkbox-label {
-    align-items: center;
-    display: flex;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
-
-label {
-    margin: 0;
-}
-
-label {
-    display: inline-block;
-    max-width: 100%;
-    margin-bottom: 5px;
-    font-weight: 700;
-}
-
-
-.campaign-section-agreement__button {
-    align-items: center;
-    background-color: #d3f2ee;
-    border-radius: 6px;
-    color: #79c4be;
-    display: flex;
-    margin-right: auto;
-    padding: 6px 8px;
-}
-
-
-.campaigns-wizard-item__button {
-    align-items: center;
-    background-color: #25a69b;
-    border: 0;
-    border-radius: 10px;
-    color: #fff;
-    display: flex;
-    font-size: 14px;
-    font-weight: 700;
-    height: auto;
-    justify-content: center;
-    line-height: 24px;
-    padding: 12px;
-    text-align: center;
-    width: 100%;
-}
-
-button, button:focus {
-    outline: none;
-}
-
-button {
-    background-color: transparent;
-    border: 1px solid #ddd;
-    height: 40px;
-    line-height: 40px;
-    transition: all .2s linear;
-}
-
-input, button, select, textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-}
-
-    button, html input[type=button], input[type=reset], input[type=submit] {
-        -webkit-appearance: button;
-        cursor: pointer;
-    }
-
-button, select {
-    text-transform: none;
-}
-
-button {
-    overflow: visible;
-}
-
-button, input, optgroup, select, textarea {
-    margin: 0;
-    font: inherit;
-    color: inherit;
-}
-
-p {
-    margin: 0 0 10px;
+ol {
+    list-style-type: decimal;
 }

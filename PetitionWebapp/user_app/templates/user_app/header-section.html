@@ -1,0 +1,98 @@
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <button onclick="window.location.href='{% url 'petition_app:petitions-create' %}';" class="create-campaign-btn">
+                        ایجاد کارزار
+                    </button>
+                    <button onclick="window.location.href='{% url 'user_app:profile-update' request.user.pk %}';">
+                        پنل کاربری
+                    </button>
+                    <button onclick="myFunction()">
+                        <script>
+                            function myFunction() {
+                                var txt;
+                                alert("There is no news today!")
+                            }
+                        </script>
+                        <img src="../../../static/bell/logo.png" width="30px;"/>
+                    </button>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            درباره کارزار
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'rules' %}">معرفی استارپ آپ کارزار</a></li>
+                            <li><a class="dropdown-item" href="{% url 'rules' %}">ایا کارزار ها موثر است؟</a></li>
+                            <li><a class="dropdown-item" href="{% url 'rules' %}">رسانه های همراه</a></li>
+                            <li><a class="dropdown-item" href="{% url 'rules' %}">مجوز های قانونی</a></li>
+                            <li><a class="dropdown-item" href="{% url 'rules' %}">سیاست نامه های حریم خصوصی</a></li>
+                            <li><a class="dropdown-item" href="{% url 'rules' %}">قوانین و شرایط استفاده</a></li>
+                            <li><a class="dropdown-item" href="{% url 'rules' %}">پرسش های پر تکرار</a></li>
+                            <li><a class="dropdown-item" href="{% url 'rules' %}">رویداد کنشگری ایران</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            حمایت از کارزار
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'rules' %}">حمایت مالی</a></li>
+                            <li><a class="dropdown-item" href="{% url 'rules' %}">فهرست اعضای ویژه</a></li>
+                            <li><a class="dropdown-item" href="{% url 'rules' %}">عضویت ویژه در کارزار</a></li>
+                            <li><a class="dropdown-item" href="{% url 'rules' %}">جامعه داوطلبان کارزار</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            مجله کارزار
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'index' %}">صفحه اصلی مجله</a></li>
+                            <li><a class="dropdown-item" href="{% url 'index' %}">رادیو کارزار(پادکست)</a></li>
+                            <li><a class="dropdown-item" href="{% url 'index' %}">دیدبان کارزار (ویدیو ها)</a></li>
+                            <li><a class="dropdown-item" href="{% url 'index' %}">گزارش های رسانه ای</a></li>
+                            <li><a class="dropdown-item" href="{% url 'index' %}">تجربه های موفق کنشگری</a></li>
+                            <li><a class="dropdown-item" href="{% url 'index' %}">یادداشت های تحلیلی</a></li>
+                            <li><a class="dropdown-item" href="{% url 'index' %}">فرهنگ کنشگری</a></li>
+                            <li><a class="dropdown-item" href="{% url 'index' %}">اخبار کارزار</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            پیگیری کارزارها
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'rules' %}">پیگیری های رسانه ای </a> </li>
+                            <li><a class="dropdown-item" href="{% url 'rules' %}">ثبت در دبیرخانه ها</a></li>
+                            <li><a class="dropdown-item" href="{% url 'rules' %}">سایر پیگیری ها </a> </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{% url 'petition_app:petitions-list' %}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            کارزارها
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'petition_app:petitions-list' %}">فهرست همه ی کارزارها</a></li>
+                            <li><a class="dropdown-item" href="{% url 'petition_app:petitions-list' %}">محبوب ترین کارزارها</a></li>
+                            <li><a class="dropdown-item" href="{% url 'petition_app:petitions-list' %}">پر امضا ترین کارزارها </a></li>
+                            <li><a class="dropdown-item" href="{% url 'petition_app:petitions-list' %}">کارزار های موفق</a></li>
+                            <li><a class="dropdown-item" href="{% url 'petition_app:petitions-list' %}">کارزارهای داغ امروز</a></li>
+                            <li><a class="dropdown-item" href="{% url 'petition_app:petitions-list' %}">کارزارهای در حال رشد </a></li>
+                            <li><a class="dropdown-item" href="{% url 'petition_app:petitions-list' %}">کارزار های نوپا</a></li>
+                        </ul>
+                    </li>
+                </ul>
+               <div class="d-flex">
+                    <div style="font-family: IranSans;">
+                        <p style="text-align: right;padding-top:30px;margin:0;" class="navbar-title">کارزار</p>
+                        <p style="text-align:right;justify-content:right;font-size:smaller;padding-top:0;" class="navbar-des"><br>بستر جمع‌آوری کارزارهای مستقل</p>
+                    </div>
+                    <img class="navbar-icon" src="http://karzar.net/assets/img/logo.png">
+                </div>
+            </div>
+        </div>
+    </nav>
