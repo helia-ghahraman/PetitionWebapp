@@ -16,7 +16,7 @@
         {% include "./header-section.html" %}
 
         <!--middlePart-->
-        <form action="/">
+        <form method="post">
             {% csrf_token %}
             <div class="banner">
                 <h1 style="font-family: IranSans;">!برای حمایت از کارزار آن را امضا کنید</h1>
@@ -24,7 +24,7 @@
             <p style="font-size:25px;text-align:center;margin-top:20px;"><strong>:اطلاعات کاربر</strong></p>
             <div class="item">
                 <label for="name"><span>*</span>نام کاربری</label>
-                <input id="name" type="text" name="name" required />
+                <input id="name" type="text" name="name" value="{{ user.username }}" required />
             </div>
             <div class="item">
                 <label for="password"><span>*</span>رمز عبور</label>
@@ -32,14 +32,14 @@
             </div>
            
             <div class="btn-block">
-                <button style="border-radius: 8px; font-family: sans-serif;" type="submit" href="/">login</button>
+                <button style="border-radius: 8px; font-family: sans-serif;" type="submit" onclick="window.location.href='{% url 'petition_app:user-login' %}';">login</button>
             </div>
         </form>
-        <form action="log-in.html">
+        <form method="post">
             {% csrf_token %}
             <div class="btn-block">
                 <p>.اگر هنوز ثبت نام نکرده‌اید، با دکمه‌ی زیر ثبت نام کنید و وارد شوید</p>
-                <button style="border-radius: 8px;font-family:sans-serif;" type="submit" href="/">sign-in</button>
+                <button style="border-radius: 8px;font-family:sans-serif;" type="submit" onclick="window.location.href='{% url 'petition_app:user-signup' %}';">sign-in</button>
             </div>
         </form>
         <!-----------------  footer ---------------->
